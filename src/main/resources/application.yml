@@ -1,0 +1,4 @@
+kafka:
+  topic: testTopic
+  consumerGroupId: group_id
+  server: localhost:9092
