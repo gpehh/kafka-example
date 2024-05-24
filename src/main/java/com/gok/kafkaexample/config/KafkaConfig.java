@@ -13,9 +13,9 @@ import java.util.HashMap;
 import java.util.Map;
 
 @Configuration
-public class KafkaConfiguration {
+public class KafkaConfig {
 
-   /*@Bean
+   @Bean
     public ProducerFactory<String, String> producerFactoryString() {
         Map<String, Object> configProps = new HashMap<>();
 
@@ -24,14 +24,14 @@ public class KafkaConfiguration {
         configProps.put(ProducerConfig.VALUE_SERIALIZER_CLASS_CONFIG, StringSerializer.class);
 
         return new DefaultKafkaProducerFactory<>(configProps);
-    }*/
+    }
 
-   /* @Bean
+    @Bean
     public KafkaTemplate<String, String> kafkaTemplateString() {
         return new KafkaTemplate<>(producerFactoryString());
-    }*/
+    }
 
-   /* @Bean
+    @Bean
     public ConsumerFactory<String, String> consumerFactory() {
         Map<String, Object> configProps = new HashMap<>();
         configProps.put(ConsumerConfig.BOOTSTRAP_SERVERS_CONFIG, "localhost:9092");
@@ -40,13 +40,13 @@ public class KafkaConfiguration {
         configProps.put(ConsumerConfig.VALUE_DESERIALIZER_CLASS_CONFIG, StringDeserializer.class);
 
         return new DefaultKafkaConsumerFactory<>(configProps);
-    }*/
+    }
 
-   /* @Bean
+    @Bean
     public ConcurrentKafkaListenerContainerFactory<String, String> kafkaListenerContainerFactory() {
         ConcurrentKafkaListenerContainerFactory<String, String> factory = new ConcurrentKafkaListenerContainerFactory<>();
         factory.setConsumerFactory(consumerFactory());
 
         return factory;
-    }*/
+    }
 }
