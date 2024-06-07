@@ -16,8 +16,6 @@ public final class KafkaController {
         this.consumerPartitionKafkaService = consumerPartitionKafkaService;
     }
 
-
-
     @PostMapping(value = "/send")
     public void sendMessageToKafkaTopic(@RequestParam String message) {
         producerService.sendMessage(message);
